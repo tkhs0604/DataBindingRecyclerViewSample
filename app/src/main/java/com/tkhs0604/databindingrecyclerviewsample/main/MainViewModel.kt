@@ -24,19 +24,17 @@ class MainViewModel : ViewModel() {
         get() = _isRefreshing
 
     init {
-        viewModelScope.launch {
-            _items.value = loadItems()
-        }
+        loadItems()
     }
 
-    private fun loadItems(): List<MainCell> {
-        return repository.loadItems()
+    private fun loadItems() {
+        _isRefreshing.value = true
+        _items.value = repository.loadItems()
+        _isRefreshing.value = false
     }
 
     fun onRefresh() {
-        _isRefreshing.value = true
-        _items.value = loadItems()
-        _isRefreshing.value = false
+        loadItems()
     }
 
     fun onClickItem(position: Int) {
