@@ -7,8 +7,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.DiffUtil
 import com.tkhs0604.databindingrecyclerviewsample.base.recyclerview.BaseListAdapter
-import com.tkhs0604.databindingrecyclerviewsample.databinding.ItemType1Binding
-import com.tkhs0604.databindingrecyclerviewsample.databinding.ItemType2Binding
+import com.tkhs0604.databindingrecyclerviewsample.databinding.*
 import com.tkhs0604.databindingrecyclerviewsample.main.model.MainCell
 
 class MainAdapter(
@@ -24,8 +23,8 @@ class MainAdapter(
         val inflater = LayoutInflater.from(parent.context)
 
         return when (MainCell.Type.values()[viewType]) {
-            MainCell.Type.Type1 -> ItemType1Binding.inflate(inflater, parent, false)
-            MainCell.Type.Type2 -> ItemType2Binding.inflate(inflater, parent, false)
+            MainCell.Type.Type1 -> Cell1Binding.inflate(inflater, parent, false)
+            MainCell.Type.Type2 -> Cell2Binding.inflate(inflater, parent, false)
         }
     }
 
