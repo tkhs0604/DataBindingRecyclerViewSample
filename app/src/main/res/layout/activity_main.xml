@@ -19,7 +19,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
-            items="@{viewmodel.items}"
+            items="@{viewmodel.contents}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:orientation="vertical"

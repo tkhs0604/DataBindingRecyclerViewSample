@@ -9,9 +9,9 @@ class MainViewModel : ViewModel() {
 
     private val repository = MainRepository()
 
-    private val _items = MutableLiveData<List<MainListContent>>(emptyList())
-    val items: LiveData<List<MainListContent>>
-        get() = _items
+    private val _contents = MutableLiveData<List<MainListContent>>(emptyList())
+    val contents: LiveData<List<MainListContent>>
+        get() = _contents
 
     private val _snackbarMessage = MutableLiveData<String>()
     val snackbarMessage: LiveData<String>
@@ -22,17 +22,17 @@ class MainViewModel : ViewModel() {
         get() = _isRefreshing
 
     init {
-        loadItems()
+        loadContents()
     }
 
-    private fun loadItems() {
+    private fun loadContents() {
         _isRefreshing.value = true
-        _items.value = repository.loadItems()
+        _contents.value = repository.loadItems()
         _isRefreshing.value = false
     }
 
     fun onRefresh() {
-        loadItems()
+        loadContents()
     }
 
     fun onClickItem(position: Int) {
