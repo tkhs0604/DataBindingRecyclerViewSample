@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.tkhs0604.databindingrecyclerviewsample.BR
 
-abstract class BaseListAdapter<T : Cell<E>, E : Enum<E>>(
+abstract class BaseListAdapter<T : Content<E>, E : Enum<E>>(
     private val parentViewModel: ViewModel,
     private val parentLifecycleOwner: LifecycleOwner,
     diffCallback: DiffUtil.ItemCallback<T>

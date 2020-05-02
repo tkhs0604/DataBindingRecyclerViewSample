@@ -3,16 +3,14 @@ package com.tkhs0604.databindingrecyclerviewsample.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.tkhs0604.databindingrecyclerviewsample.main.model.MainCell
-import kotlinx.coroutines.launch
+import com.tkhs0604.databindingrecyclerviewsample.main.model.MainListContent
 
 class MainViewModel : ViewModel() {
 
     private val repository = MainRepository()
 
-    private val _items = MutableLiveData<List<MainCell>>(emptyList())
-    val items: LiveData<List<MainCell>>
+    private val _items = MutableLiveData<List<MainListContent>>(emptyList())
+    val items: LiveData<List<MainListContent>>
         get() = _items
 
     private val _snackbarMessage = MutableLiveData<String>()
