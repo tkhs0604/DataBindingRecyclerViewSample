@@ -5,21 +5,21 @@ import kotlin.random.Random
 
 class MainRepository {
 
-    fun loadItems(): List<MainListContent> {
-        return items
+    fun loadContents(): List<MainListContent> {
+        return contents
     }
 
-    private val items: List<MainListContent>
+    private val contents: List<MainListContent>
         get() = samples.take(Random.nextInt(samples.size))
 
     companion object {
         private val samples = listOf(
-            MainListContent.Cell1("Taro"),
-            MainListContent.Cell2(10000),
-            MainListContent.Cell1("Jiro"),
-            MainListContent.Cell2(20000),
-            MainListContent.Cell1("Saburo"),
-            MainListContent.Cell2(30000)
+            MainListContent.Content1("Taro"),
+            MainListContent.Content2(10000),
+            MainListContent.Content1("Jiro"),
+            MainListContent.Content2(20000),
+            MainListContent.Content1("Saburo"),
+            MainListContent.Content2(30000)
         )
     }
 

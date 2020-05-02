@@ -10,7 +10,7 @@
 
         <variable
             name="item"
-            type="com.tkhs0604.databindingrecyclerviewsample.main.model.MainListContent.Cell1" />
+            type="com.tkhs0604.databindingrecyclerviewsample.main.model.MainListContent.Content1" />
 
         <variable
             name="position"

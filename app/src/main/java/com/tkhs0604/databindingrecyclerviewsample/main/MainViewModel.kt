@@ -27,7 +27,7 @@ class MainViewModel : ViewModel() {
 
     private fun loadContents() {
         _isRefreshing.value = true
-        _contents.value = repository.loadItems()
+        _contents.value = repository.loadContents()
         _isRefreshing.value = false
     }
 

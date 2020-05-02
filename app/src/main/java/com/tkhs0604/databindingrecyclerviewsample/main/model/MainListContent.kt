@@ -13,12 +13,12 @@ sealed class MainListContent(
         Type2,
     }
 
-    data class Cell1(val name: String) : MainListContent(
+    data class Content1(val name: String) : MainListContent(
         id = generateId(ViewType.Type1),
         viewType = ViewType.Type1
     )
 
-    data class Cell2(val number: Int) : MainListContent(
+    data class Content2(val number: Int) : MainListContent(
         id = generateId(ViewType.Type2),
         viewType = ViewType.Type2
     )
