@@ -23,8 +23,8 @@ class MainAdapter(
         val inflater = LayoutInflater.from(parent.context)
 
         return when (MainCell.Type.values()[viewType]) {
-            MainCell.Type.Type1 -> Cell1Binding.inflate(inflater, parent, false)
-            MainCell.Type.Type2 -> Cell2Binding.inflate(inflater, parent, false)
+            MainCell.Type.Type1 -> ItemType1Binding.inflate(inflater, parent, false)
+            MainCell.Type.Type2 -> ItemType2Binding.inflate(inflater, parent, false)
         }
     }
 
