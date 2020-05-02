@@ -11,7 +11,7 @@ import com.tkhs0604.databindingrecyclerviewsample.databinding.ItemType1Binding
 import com.tkhs0604.databindingrecyclerviewsample.databinding.ItemType2Binding
 import com.tkhs0604.databindingrecyclerviewsample.main.model.MainListContent
 
-class MainAdapter(
+class MainListAdapter(
     parentViewModel: ViewModel,
     parentLifecycleOwner: LifecycleOwner
 ) : BaseListAdapter<MainListContent, MainListContent.ViewType>(

@@ -7,7 +7,7 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.google.android.material.snackbar.Snackbar
 import com.tkhs0604.databindingrecyclerviewsample.databinding.ActivityMainBinding
-import com.tkhs0604.databindingrecyclerviewsample.main.view.MainAdapter
+import com.tkhs0604.databindingrecyclerviewsample.main.view.MainListAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
 
-        binding.list.adapter = MainAdapter(viewModel, this)
+        binding.list.adapter = MainListAdapter(viewModel, this)
         binding.list.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         viewModel.snackbarMessage.observe(this) {
