@@ -16,9 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val viewModel: MainViewModel by lazy {
-        ViewModelProvider
-            .AndroidViewModelFactory(this.application)
-            .create(MainViewModel::class.java)
+        ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
