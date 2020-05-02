@@ -26,7 +26,7 @@ abstract class BaseListAdapter<T : Content<E>, E : Enum<E>>(
     }
 
     override fun getItemViewType(position: Int): Int {
-        return getItem(position).type.ordinal
+        return getItem(position).viewType.ordinal
     }
 
     @CallSuper
